@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  angular:
+    build: .
+    image: ng-dock
+    environment:
+        MAPBOX_ACCESS_TOKEN: "pk.eyJ1IjoidXNhY3JjIiwiYSI6ImNrN2dtaHNweTAxNzMzZnA5eWR3MzBmcTkifQ.qsaIgRHPqAHu2chv9Y7sCw"
+        API_TOKEN: "xALDIUUBYGaAp1hvaXSvu7LTG0lf721N6Lh3StaS"
+        ROOT_URL: "https://bpblbpka2a.execute-api.us-east-2.amazonaws.com"
+        MAP_DATA_URL : "data"
+        START_PROCESSING_URL_PART: "datapipelinetrigger"
+        PROCESSING_STATUS_URL_PART: "progress"
+        API_S3BUCKET : "https://afdata.s3.us-gov-west-1.amazonaws.com/index.html"
+        ENVIRONMENT_TYPE : "prod"
+    container_name: ng-docker
+    ports:
+      - 8080:80
+
+ 

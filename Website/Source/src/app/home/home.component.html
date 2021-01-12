@@ -1,0 +1,43 @@
+
+  <div class="map mapHost" id="mapgl"></div>
+
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-1 searchPane">
+        <label class="headerLabel">Search by Date</label>
+        <div class="mb-3">
+          <label style="margin-bottom: 1px !important">From</label><br />
+          <input [owlDateTime]="dt1" class="formcontrol small datepicker" [owlDateTimeTrigger]="dt1" [(ngModel)]="dateTimeService.overallDateRange.startDate" placeholder="Date Time" (dateTimeChange)="datetimeFromChange($event)">
+          <span [owlDateTimeTrigger]="dt1"><i class="fa fa-calendar "></i></span>
+          <owl-date-time #dt1 [stepMinute]="dateTimeService.incrementMinutes" [startAt]="dateTimeService.overallDateRange.startDate"></owl-date-time>
+        </div>
+
+        <div class="mb-3">
+          <label style="margin-bottom: 1px !important">To</label><br />
+          <input [owlDateTime]="dt2" class="formcontrol small datepicker" [owlDateTimeTrigger]="dt2" [(ngModel)]="dateTimeService.overallDateRange.endDate" placeholder="Date Time" (dateTimeChange)="datetimeToChange($event)">
+          <span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
+          <owl-date-time #dt2 [stepMinute]="dateTimeService.incrementMinutes" [startAt]="dateTimeService.overallDateRange.endDate"></owl-date-time>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm btn-block" (click)="search()">Search</button>
+
+
+      </div>
+      <div class="col-md-11">
+        <div class="mb-5">
+          <label class="headerLabel">Adjust Slider To Examine Specific Times in Date Range</label>
+
+        </div>
+        <div class="custom-slide">
+          <ng5-slider [(value)]="value" [options]="dateTimeService.options" (mouseup)="sliderChange()"></ng5-slider>
+        </div>
+        <span style="font-size: small">* Dates and time are in UTC</span>
+      </div>
+      
+    </div>
+  </div>
+   
+
+
+
+
+

@@ -1,0 +1,27 @@
+<div style="height: 90%; background: radial-gradient(#7b83d6, #101552);">
+   
+    <div class="centerscreen">
+        <div>
+            <span [innerHTML]="text"></span>
+        </div>
+        
+        <div class="buttonMargin" *ngIf="showNeedsBuild">
+            <button type="button" class="btn btn-primary btn-md" (click)="startImport()">Start importing data</button>
+        </div>
+        
+    </div>
+    <section *ngIf="showGif">
+
+        <div class="center"></div>
+        <article class="ring1">
+          <div></div>
+        </article>
+        <article class="ring2">
+          <div></div>
+        </article>
+        <article class="ring3">
+          <div></div>
+        </article>
+    </section>
+</div>
+

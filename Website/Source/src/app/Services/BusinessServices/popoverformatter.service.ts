@@ -51,7 +51,7 @@ export class PopoverformatterService implements IMapPopoverFormatter {
             sat.noradCatNumber && sat.noradCatNumber.trim() != ""
               ? sat.noradCatNumber
               : "- -";
-          html += this.getRow(norad, alignRight);
+          html += this.getOnceCellRow(norad, alignRight);
         }
       } catch (ex) {
         console.log("error", ex);

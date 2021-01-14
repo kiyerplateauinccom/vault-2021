@@ -46,12 +46,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    let fromMoment = moment(new Date(2017, 1, 31)).utc();
+    let fromMoment = moment(new Date(2014, 1, 1)).utc(true);
     let toMoment = moment(fromMoment.toString())
       .utc()
-      .add(24, "h");
+      .add(1, "hour");
 
-    this.dateTimeService.initialize(fromMoment, toMoment, true);
+    this.dateTimeService.initialize(fromMoment, toMoment, false);
 
     this.mapService.mapLoaded.subscribe(x => {
       this.LoadMap();
@@ -89,7 +89,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.value = 0;
       if (this.originalFeatureCollection){
         try {
-          this.dateTimeService.rebuild(true);
+          this.dateTimeService.rebuild(false);
         } catch {}
   
         try {
@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
           this.lineService.clear();
         } catch {}
       }
-      this.dateTimeService.initialize(this.dateTimeService.overallDateRange.startMoment, this.dateTimeService.overallDateRange.endMoment, true);
+      this.dateTimeService.initialize(this.dateTimeService.overallDateRange.startMoment, this.dateTimeService.overallDateRange.endMoment, false);
       this.LoadMap();
     }
   }
@@ -115,8 +115,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   sliderChange(): void {
     this.spinner.show();
     let range = this.dateTimeService.getRange(this.value);
-
+    alert(range)
     if (range !== null) {
+      console.log("original", this.originalFeatureCollection)
       if (this.originalFeatureCollection){
         try {
           this.lineService.clear();
@@ -126,6 +127,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
           range,
           this.originalFeatureCollection
         );
+        
         this.lineService.drawLines(filtered);
         this.clusteringService.rebuildCluster(filtered);
       } else {

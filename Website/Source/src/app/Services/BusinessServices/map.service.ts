@@ -46,10 +46,16 @@ export class MapService {
   }
 
   removeLayer(layerName: string): void {
-    this.mapgl.removeLayer(layerName);
+    const thisLayer = this.mapgl.getLayer(layerName);
+    if (thisLayer !== null && thisLayer !== undefined){
+      this.mapgl.removeLayer(layerName);
+    }
   }
   removeSource(sourceName: string): void {
-    this.mapgl.removeSource(sourceName);
+    const thisSource = this.mapgl.getLayer(sourceName);
+    if (thisSource !== null && thisSource !== undefined){
+      this.mapgl.removeSource(sourceName);
+    }
   }
 
   addLineSource(sourceName: string, coordinates: any[]) {

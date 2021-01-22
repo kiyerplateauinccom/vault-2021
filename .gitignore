@@ -21,9 +21,11 @@
 # Ignore files that contain harddrive-specific information
 
 # Exclude various Vault 2021 files
+data/html/linux_training.html
 
 # Ignore whole folders
 **/.git/
+data/pdf/LOSS_*.pdf
 
 # Ignore whole file types
 

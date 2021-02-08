@@ -5,6 +5,7 @@
 /*
 !.gitignore
 !/Website
+!/cpd-pdf-demo
 !/data
 !/ipynb
 !/load_magic
@@ -26,8 +27,10 @@ data/html/linux_training.html
 # Ignore whole folders
 **/.git/
 data/pdf/LOSS_*.pdf
+cpd-pdf-demo/cpd_env/
 
 # Ignore whole file types
+*.pdf
 
 # Ignore big files (GitHub will warn you when pushing files larger than 50 MB. You will not be allowed to
 # push files larger than 100 MB.) Tip: If you regularly push large files to GitHub, consider introducing

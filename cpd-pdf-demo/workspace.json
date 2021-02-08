@@ -1,0 +1,52 @@
+{
+    "data": {
+        "layout-restorer:data": {
+            "main": {
+                "dock": {
+                    "type": "tab-area",
+                    "currentIndex": 2,
+                    "widgets": [
+								"markdownviewer-widget:vault-2021/CPD_PDF_Demo/README.md",
+								"notebook:vault-2021/CPD_PDF_Demo/ipynb/OS Path Navigation.ipynb"
+							   ]
+                },
+                "mode": "multiple-document",
+                "current": "notebook:vault-2021/CPD_PDF_Demo/ipynb/OS Path Navigation.ipynb"
+            },
+            "left": {
+                "collapsed": false,
+                "current": "filebrowser",
+                "widgets": [
+                            "filebrowser",
+                            "running-sessions",
+                            "command-palette",
+                            "jp-property-inspector",
+                            "tab-manager",
+                            "extensionmanager.main-view"
+                           ]
+            },
+            "right": {
+                "collapsed": true,
+                "widgets": []
+            }
+        },
+        "file-browser-filebrowser:cwd": {
+            "path": "vault-2021/CPD_PDF_Demo/ipynb"
+        },
+        "markdownviewer-widget:vault-2021/CPD_PDF_Demo/README.md": {
+            "data": {
+                "path": "vault-2021/CPD_PDF_Demo/README.md",
+                "factory": "Markdown Preview"
+            }
+        },
+        "notebook:vault-2021/CPD_PDF_Demo/ipynb/OS Path Navigation.ipynb": {
+            "data": {
+                "path": "vault-2021/CPD_PDF_Demo/ipynb/OS Path Navigation.ipynb",
+                "factory": "Notebook"
+            }
+        }
+    },
+    "metadata": {
+        "id": "/lab"
+    }
+}

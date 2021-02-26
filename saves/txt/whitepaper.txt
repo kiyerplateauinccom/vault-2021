@@ -1,0 +1,58 @@
+
+Dave is going to look on creating a Synthetic Data Generator and Whitepaper.
+
+
+For example, the user will be able to enter that they need 4 columns (1 categorical/string and 3 numerical) of 150,000 records each. Additionally, the user will be able to input that the categorical columns will have 3 evenly distributed categories and the numeric columns will each be represented by mean, skew, and kurtosis. Then the API will output randomized data based on the user input that the user can use it to develop data pipelines or pre-build machine learning models, and for unit testing code.
+* NOTE: this example is just a starting point and Dave will flesh out this idea to produce a better design.
+
+This whitepaper will outline the methods used to produce the Synthetic Data Generator, a high-level overview of the current state synthetic data generation, and the pitfalls of currently available synthetic data generation methods and/or uses.
+
+In a few words, identify and address a problem and a proposed solution. The solution is based on a thorough examination of the problem and potential solutions. 
+Make sure you that you have your audience in mind when you write your white paper. Who is your audience and what are you trying to convey? Are they industry experts or is this an investment pitch to a business audience? This should help you set the tone and the correct verbiage for your paper.
+
+New Trend: 
+
+Changing Technique:
+
+Industry Comparisons:
+
+New Entries into the Market: 
+
+How do you propose on solving this issue and what are your recommendations?
+
+Common Dilemma: you want to build, test or develop with sensitive data, but are unable to access it due to common governance concerns. Solution? The Synthetic Data Generator – code that can be exposed as an API to generator synthetic data, based on the input from the user.
+
+Describe the methods and demographics you used to obtain your data. The author has experience creating complex simulations and understands the concept of using simulated data to check for errors in mult-step statistical processes, but decided to google "synthetic data generator" because speaking to humans in textual form is not something that comes naturally. This strategy will ensure that there are no "unknown unknowns", but mostly will just force the author to be explicit with concepts already understood.
+
+Why did you choose the research tactics you implemented?
+
+How will this strategy inform on the topic you’re covering?
+
+Key Findings
+
+Use Cases
+
+The Synthetic Data Generator is a tool or method for our development team to use in our data projects. We use synthetic data to overcome data privacy issues, and for running simulations, testing, training ML models, etc. 
+This tool can be used as an alternate to data masking and data anonymization as well.
+
+Mergers, where Human Resources data is in a different format. IoT data, where privacy concerns prevent direct use of the data.
+
+Train local generators on siloed data, sync the generators, aggregate the synthetic data, then do cross-silo data analysis.
+
+You can use synthetic data to evaluate your ability to share data with third parties.
+
+Synthetic data allows for the creation of rare combinations of events to better test the resiliancy of your IT infrastructure.
+
+Data Scientists need high quality, highly representative data in order for them to test the algorithms they are creating.
+
+Synthetic data can also be used to test the leakage of untrusted protocols and platforms – introduce easily-findable fake data into the cloud and check if it appears somewhere undesirable.
+
+Fake data is generated with a statistically valid sample of the data in order to get the four moments of distribution – Mean, Variance, Skewness, and Kurtosis – correct.
+
+A large collection of links to open datasets in the public domain can be found at https://github.com/awesomedata/awesome-public-datasets.
+
+You can use GPT-3 to generate data from examples, but using GPT-2 (e.g. https://gpt2.ai-demo.xyz/) is a long and tedious process.
+
+You can use Unity to generate synthetic 3D data by changing various parameters.
+
+You can generate enough data to train your models, then validate them on real data, but making simulated textual data is hard because you have to have what is in effect a large hidden Markov model of how humans generate text.

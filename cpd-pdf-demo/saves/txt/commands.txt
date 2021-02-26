@@ -1,0 +1,3 @@
+
+docker run -v $PWD/pdf:/pdf jbarlow83/ocrmypdf /pdf/eShort_Kinematic_log_11_7.pdf /pdf/eShort_Kinematic_log_11_7_ocr.pdf --language eng
+docker run -v $PWD/pdf:/pdf gkmr/pdf-tools pdftotext /pdf/eShort_Kinematic_log_11_7_ocr.pdf /pdf/eShort_Kinematic_log_11_7_ocr.txt
